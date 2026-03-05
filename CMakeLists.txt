@@ -10,4 +10,4 @@ message(STATUS "PRO_PATH = " ${PROJECT_SOURCE_DIR})
 
 add_subdirectory(examples)
 add_subdirectory(src)
-
+add_subdirectory(my_research)

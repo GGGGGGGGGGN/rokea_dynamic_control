@@ -28,7 +28,7 @@ using namespace xmate;
 using JointControl = std::function<JointPositions(RCI::robot::RobotState robot_state)>;
 int main(int argc, char *argv[]) {
     std::string ipaddr = "192.168.0.160";
-    uint16_t port = 1338;
+    uint16_t port = 1337;
 
     std::string file = "../../xmate.ini";
     INIParser ini;
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     }
     
     // RCI连接机器人
-    xmate::Robot robot(ipaddr, port,XmateType::XMATE3);
+    xmate::Robot robot(ipaddr, port,XmateType::XMATE7_PRO,false);
     //防止网络连接失败
     sleep(2);
     int res = robot.getMotorState();
