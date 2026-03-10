@@ -17,6 +17,7 @@ set(MY_TARGETS
         get_states
         hello
         zero_gravity
+        calc_dynamics
         )
 
 # 4. 自动化编译与链接流水线
