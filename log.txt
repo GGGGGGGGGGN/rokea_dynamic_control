@@ -1,0 +1,163 @@
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./examples/joint_impedance_move 
+port:1337
+ip:192.168.0.160
+terminate called after throwing an instance of 'xmate::CommandException'
+  what():  libxmate: StartMove  command aborted!
+Aborted
+
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./examples/joint_impedance_move 
+port:1337
+ip:192.168.0.160
+terminate called after throwing an instance of 'xmate::CommandException'
+  what():  libxmate: StartMove  command aborted!
+Aborted
+
+
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./examples/joint_impedance_move 
+port:1337
+ip:192.168.0.160
+-> 正在清除机器人底层历史错误...
+-> 正在强行终止残留运动状态...
+-> 正在给电机上使能...
+terminate called after throwing an instance of 'xmate::CommandException'
+  what():  libxmate: StartMove  command aborted!
+Aborted
+
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./examples/joint_impedance_move 
+port:1337
+ip:192.168.0.160
+-> 正在清除机器人底层历史错误...
+-> 正在强行终止残留运动状态...
+-> 正在给电机上使能...
+-> 探针 A：正在读取当前姿态...
+-> 移动到初始位置...
+✅ MOVEJ 执行完毕！机械臂已到达初始位置。
+-> 探针 D：正在下发阻抗模式 StartMove 指令...
+terminate called after throwing an instance of 'xmate::CommandException'
+  what():  libxmate: StartMove  command aborted!
+Aborted
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ 
+
+
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./my_research/zero_gravity 
+正在连接机械臂 IP: 192.168.0.160 端口: 1337 ...
+port:1337
+ip:192.168.0.160
+
+================ 警告 & 提示 ================
+即将进入【纯力矩透传 - 零重力拖动模式】！
+机械臂将失去位置保持刚度，请将手放在机械臂下方做好保护。
+你有 10 秒钟的时间可以像在太空一样拨动它！
+3秒后开始...
+^C
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./my_research/pd_ctl 
+正在连接机械臂 IP: 192.168.0.160 端口: 1337 ...
+port:1337
+ip:192.168.0.160
+terminate called after throwing an instance of 'xmate::UdpException'
+  what():  初始化接收udp数据超时
+Aborted
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./my_research/pd_ctl 
+正在连接机械臂 IP: 192.168.0.160 端口: 1337 ...
+port:1337
+ip:192.168.0.160
+terminate called after throwing an instance of 'xmate::UdpException'
+  what():  初始化接收udp数据超时
+Aborted
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./my_research/pd_ctl 
+正在连接机械臂 IP: 192.168.0.160 端口: 1337 ...
+port:1337
+ip:192.168.0.160
+terminate called after throwing an instance of 'xmate::UdpException'
+  what():  初始化接收udp数据超时
+Aborted
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./my_research/pd_ctl 
+正在连接机械臂 IP: 192.168.0.160 端口: 1337 ...
+port:1337
+ip:192.168.0.160
+terminate called after throwing an instance of 'xmate::UdpException'
+  what():  初始化接收udp数据超时
+Aborted
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./my_research/pd_ctl 
+正在连接机械臂 IP: 192.168.0.160 端口: 1337 ...
+port:1337
+ip:192.168.0.160
+-> 正在清除机器人底层错误 (automaticErrorRecovery)...
+-> 正在给电机上使能 (setMotorPower)...
+-> 探针 1：正在尝试读取一帧底层 UDP 数据...
+✅ 探针 1 成功！收到 UDP 数据，当前 Joint 1 角度: 9.63232e-05
+
+================ 🚀 试飞提示 ================
+即将进入【纯 PD 位置保持模式】！
+因为底层自带 90% 的重力补偿，PD 弹簧将负责拉住剩下误差。
+你可以尝试轻轻推拽机械臂，感受柔顺的弹簧阻抗力。
+3秒后开始...
+-> 正在尝试清理历史运动状态 (stopMove)...
+-> 正在发送 TCP 启动指令 (startMove)...
+^C
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ ^C
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ 
+
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./my_research/t_ctl 
+port:1337
+ip:192.168.0.160
+-> 正在配置动力学负载参数 (setLoad)...
+-> 正在下发 kTorque + kIdle 启动指令 (startMove)...
+✅ 成功冲破 startMove 阻塞！
+🔥 成功进入 1kHz UDP 实时力矩循环！
+✅ 运行结束，正在安全下电...
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ 
+
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./my_research/pd_ctl 
+port:1337
+ip:192.168.0.160
+-> 正在清除机器人底层错误...
+-> 正在给电机上使能 (听咔哒声)...
+-> 正在配置动力学负载参数 (setLoad)...
+
+================ 🚀 试飞提示 ================
+即将进入【纯 PD 位置保持模式】！
+请将手放在急停按钮上，运行后尝试轻轻推拽机械臂，感受弹簧阻抗力。
+3秒后开始...
+-> 正在发送 TCP 启动指令 (kTorque + kIdle)...
+🔥 成功进入 1kHz 控制循环！开始输出 PD 阻抗力！
+⏱️ 正在运行力矩控制... 0 秒
+⏱️ 正在运行力矩控制... 1 秒
+⏱️ 正在运行力矩控制... 2 秒
+⏱️ 正在运行力矩控制... 3 秒
+⏱️ 正在运行力矩控制... 4 秒
+⏱️ 正在运行力矩控制... 5 秒
+⏱️ 正在运行力矩控制... 6 秒
+⏱️ 正在运行力矩控制... 7 秒
+⏱️ 正在运行力矩控制... 8 秒
+⏱️ 正在运行力矩控制... 9 秒
+
+-> 10秒控制循环结束！机械臂已恢复锁定。
+✅ 数据已安全保存至: pd_control_data.csv
+程序安全退出。
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ 4
+
+
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./my_research/pd_ctl 
+port:1337
+ip:192.168.0.160
+-> 正在清除机器人底层错误...
+-> 正在给电机上使能 (听咔哒声)...
+
+================ 🚀 终极试飞 ================
+即将进入【纯 PD 位置保持模式】！
+3秒后开始...
+-> 正在发送 TCP 启动指令 (kTorque + kJointPosition)...
+^C
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ ^C
+
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ sudo ./examples/torque_control 
+port:1337
+ip:192.168.0.160
+Make sure you have the user stop at hand!
+After starting try to push the robot and see how it reacts.
+Press Enter to continue...
+
+
+^C
+chen@chen-ASUS-TUF-Gaming-F15-FX507ZM-FX507ZM:~/Desktop/rci/ROKAE_Control_Interface/build$ ^C

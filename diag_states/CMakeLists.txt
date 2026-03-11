@@ -13,14 +13,8 @@ LINK_DIRECTORIES(
 
 # 3. 你的算法代码名字（不要加 .cpp）
 set(MY_TARGETS
-        data_recorder
-        get_states
-        hello
-        zero_gravity
-        calc_dynamics
-        pd_ctl
-        scanner
-        t_ctl
+        check_state
+        mode_test
         )
 
 # 4. 自动化编译与链接流水线

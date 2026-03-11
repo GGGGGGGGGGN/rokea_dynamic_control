@@ -1,0 +1,84 @@
+<mujoco model="xMatePro7">
+  <compiler angle="radian"/>
+
+  <default>
+    <geom contype="0" conaffinity="0"/>
+  </default>
+
+  <asset>
+    <mesh name="xMatePro7_base" file="xMateER7p/visual/xMatePro7_base.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="xMatePro7_link1" file="xMateER7p/visual/xMatePro7_link1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="xMatePro7_link2" file="xMateER7p/visual/xMatePro7_link2.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="xMatePro7_link3" file="xMateER7p/visual/xMatePro7_link3.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="xMatePro7_link4" file="xMateER7p/visual/xMatePro7_link4.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="xMatePro7_link5" file="xMateER7p/visual/xMatePro7_link5.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="xMatePro7_link6" file="xMateER7p/visual/xMatePro7_link6.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="xMatePro7_link7" file="xMateER7p/visual/xMatePro7_link7.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+
+  <worldbody>
+    <body name="tilted_mount" pos="0 0 0" euler="0 0.3490659 0">
+    <geom type="mesh" rgba="1 1 1 1" mesh="xMatePro7_base"/>
+    <body name="xMatePro7_link1">
+      <inertial pos="0 -0.017 0.32" quat="0.70391 -0.0671633 0.0671633 0.70391" mass="5.96204" diaginertia="0.0553481 0.054 0.0176519"/>
+      <joint name="joint1" pos="0 0 0" axis="0 0 1" range="-3.0527 3.0527" actuatorfrcrange="-300 300" damping="10.0" frictionloss="2.0"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="xMatePro7_link1"/>
+      
+      <body name="xMatePro7_link2" pos="0 0 0.404">
+        <inertial pos="0 0.032 0.093" quat="0.702773 -0.0781701 0.0781701 0.702773" mass="5.40302" diaginertia="0.0731535 0.07 0.00784652"/>
+        <joint name="joint2" pos="0 0 0" axis="0 1 0" range="-2.0933 2.0933" actuatorfrcrange="-300 300" damping="10.0" frictionloss="2.0"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="xMatePro7_link2"/>
+        
+        <body name="xMatePro7_link3" pos="0 0 0.260">
+          <inertial pos="0 -0.013 -0.067" quat="0.989215 -0.146472 0 0" mass="3.95735" diaginertia="0.022 0.0216056 0.0143944"/>
+          <joint name="joint3" pos="0 0 0" axis="0 0 1" range="-3.0527 3.0527" actuatorfrcrange="-300 300" damping="5.0" frictionloss="1.0"/>
+          <geom pos="0 0 0.1775" type="mesh" rgba="1 1 1 1" mesh="xMatePro7_link3"/>
+          
+          <body name="xMatePro7_link4" pos="0 0 0.1775">
+            <inertial pos="0 0.026 0.068" quat="0.7036 -0.070333 0.070333 0.7036" mass="2.91217" diaginertia="0.0248078 0.024 0.00419224"/>
+            <joint name="joint4" pos="0 0 0" axis="0 1 0" range="-2.0933 2.0933" actuatorfrcrange="-300 300" damping="5.0" frictionloss="1.0"/>
+            <geom type="mesh" rgba="1 1 1 1" mesh="xMatePro7_link4"/>
+            
+            <body name="xMatePro7_link5" pos="0 0 0.250">
+              <inertial pos="0 -0.014 -0.079" quat="0.99329 -0.115653 0 0" mass="2.47056" diaginertia="0.019 0.0184721 0.00952786"/>
+              <joint name="joint5" pos="0 0 0" axis="0 0 1" range="-3.0527 3.0527" actuatorfrcrange="-300 300" damping="2.0" frictionloss="0.5"/>
+              <geom pos="0 0 0.1625" type="mesh" rgba="1 1 1 1" mesh="xMatePro7_link5"/>
+              
+              <body name="xMatePro7_link6" pos="0 0 0.1625">
+                <inertial pos="0 0.02 0.085" quat="0.702979 -0.0762908 0.0762908 0.702979" mass="2.16053" diaginertia="0.0166589 0.016 0.00234109"/>
+                <joint name="joint6" pos="0 0 0" axis="0 1 0" range="-2.0933 2.0933" actuatorfrcrange="-300 300" damping="1.0" frictionloss="0.5"/>
+                <geom type="mesh" mesh="xMatePro7_link6"/>
+                
+                <body name="xMatePro7_link7" pos="0 0 0.2755">
+                  <inertial pos="0 0.012 -0.052" quat="0.707107 0.707107 0 0" mass="1.26834" diaginertia="0.002 0.002 0.001"/>
+                  <joint name="joint7" pos="0 0 0" axis="0 0 1" range="-6.283 6.283" actuatorfrcrange="-300 300" damping="1.0" frictionloss="0.5"/>
+                  <geom type="mesh" mesh="xMatePro7_link7"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    </body>
+  </worldbody>
+  
+  <actuator>
+    <!-- <motor joint="joint1" name="motor1" gear="1" ctrlrange="-300 300"/>
+    <motor joint="joint2" name="motor2" gear="1" ctrlrange="-300 300"/>
+    <motor joint="joint3" name="motor3" gear="1" ctrlrange="-300 300"/>
+    <motor joint="joint4" name="motor4" gear="1" ctrlrange="-300 300"/>
+    <motor joint="joint5" name="motor5" gear="1" ctrlrange="-300 300"/>
+    <motor joint="joint6" name="motor6" gear="1" ctrlrange="-300 300"/>
+    <motor joint="joint7" name="motor7" gear="1" ctrlrange="-300 300"/> -->
+
+    <position joint="joint1" name="pos1" kp="500"/>
+    <position joint="joint2" name="pos2" kp="500"/>
+    <position joint="joint3" name="pos3" kp="500"/>
+    <position joint="joint4" name="pos4" kp="500"/>
+    <position joint="joint5" name="pos5" kp="250"/>
+    <position joint="joint6" name="pos6" kp="250"/>
+    <position joint="joint7" name="pos7" kp="250"/>
+  </actuator>
+
+</mujoco>

@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
         port = static_cast<uint16_t>(ini.GetInt("network", "port"));
     }
 
-    xmate::Robot robot(ipaddr, port,XmateType::XMATE3_PRO);
+    xmate::Robot robot(ipaddr, port,XmateType::XMATE7_PRO,false);
     sleep(1);
     robot.setMotorPower(1);
 
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     q_init = robot.receiveRobotState().q;
     MOVEJ(0.2,q_init,q_drag,robot);
 
-    xmate::XmateModel model(&robot,xmate::XmateType::XMATE3_PRO);
+    xmate::XmateModel model(&robot,xmate::XmateType::XMATE7_PRO);
 
     //robot.reg();
     robot.startMove(RCI::robot::StartMoveRequest::ControllerMode::kTorque,

@@ -29,7 +29,7 @@ int main() {
     std::cout << "正在初始化 Robot 通信实例 (安全模式：不上电)..." << std::endl;
     // 实例化 Robot，不上电 (false)
     xmate::Robot robot(ipaddr, port, XmateType::XMATE7_PRO, false);
-    sleep(1);
+    sleep(3);
 
     // ==========================================
     // 💥 终极秒杀：传入 robot 的指针和机器人型号！
